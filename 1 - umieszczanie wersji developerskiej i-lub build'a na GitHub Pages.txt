@@ -7,8 +7,8 @@
 	"homepage": "https://ktosfajny.github.io/app/",		(jak dodasz projekt na GH i ustawisz jego live na GH-P to on daje ci ten link pod którym jest podgl¹d, to ten link wlasnie z live na GH-P)
 
 6 - w podobiekcie 'scripts'  dodajesz:
-"predeploy": "npm run build",
-"deploy": "gh-pages -d build",
+"predeploy": "npm run build", // <-- to build to nazwa scryptu w package.json który zbuduje aplikacjê
+"deploy": "gh-pages -d build", // <--- to build to jest nazwa folderu
 
 teraz po wpisaniu 'npm run deploy' zostanie utworzony w folderze lokalnie folder build z wersj¹ prodykcyjn¹ oraz do repo na GH zostanie dodana nowa ga³¹Ÿ z t¹ wersj¹ prodykcyjn¹ (bêdziesz mia³ wtedy 2 ga³êzie bo jeszcze ta pierwsza, developerska).
 ta nowa ga³¹Ÿ zawieraj¹ca build nazywa siê gh-pages
@@ -69,8 +69,8 @@ alternatywa  (bez zbêdnego 1 pusha, od razu za 1 razem wszystko ustawiasz - wyma
 2 - pod³¹czasz to repo ale nie pushujesz jeszcze
 3 - npm install gh-pages (cmd/powershell)
 4 - w podobiekcie 'scripts'  z pliku package.json dodajesz:
-	"predeploy": "npm run build",
-	"deploy": "gh-pages -d build",
+	"predeploy": "npm run build", // <-- to build to nazwa scryptu w package.json który zbuduje aplikacjê
+	"deploy": "gh-pages -d build", // <--- to build to jest nazwa folderu
 5 - bierzesz link z GH z repo do którego pushujesz (np z wyszukiwarki albo tam gdzie s¹ komendy do pod³¹czenia repo przez push, bierzesz ten link tylko bez koñcóki .git ) 
        	i teraz zmieniasz ten link, za³ó¿my ¿e masz link do repo: 
 	https://github.com/ktosfajny/wersjaBuildOnly2ndTake     	<---kopiujesz czêœæ oznaczaj¹c¹ twoje konto:     ktosfajny/      i wklejasz po http://  czyli masz:
